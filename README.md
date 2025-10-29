@@ -32,13 +32,15 @@ It will build and install the app on the connected Android device.
 Option 2: Generate APK Manually
 bash
 Copy code
-cd android
-./gradlew assembleDebug
+
+    cd android
+    ./gradlew assembleDebug
 The generated APK will be located at:
 
 swift
-Copy code
-android/app/build/outputs/apk/debug/app-debug.apk
+
+    android/app/build/outputs/apk/debug/app-debug.apk
+   
 🧰 3. Installations (Java, CLI, Android Studio)
 Install Expo CLI (Global)
 Expo CLI lets you create, build, and run React Native apps easily.
@@ -63,7 +65,7 @@ eas --version
 Install Java (Required by Android Studio & Gradle)
 Android Studio and Gradle require Java 17 or higher:
 
-     ```bash
+     
       sudo apt install openjdk-17-jdk -y
 
 java -version
@@ -74,9 +76,9 @@ Copy code
 openjdk version "17.0.x"
 Install Android Studio via Terminal
 Option 1: Install using Snap (simplest)
-bash
-Copy code
-sudo snap install android-studio --classic
+
+
+      sudo snap install android-studio --classic
 Wait for the installation to complete, then launch it:
 
 bash
@@ -110,32 +112,39 @@ After Android Studio installs, open terminal and run:
 
 bash
 Copy code
-sudo nano ~/.bashrc
+
+    sudo nano ~/.bashrc
+   
 At the bottom, add the following lines:
 
 bash
 Copy code
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
+
+      export ANDROID_HOME=$HOME/Android/Sdk
+      export PATH=$PATH:$ANDROID_HOME/emulator
+      export PATH=$PATH:$ANDROID_HOME/platform-tools
+      export PATH=$PATH:$ANDROID_HOME/tools
+      export PATH=$PATH:$ANDROID_HOME/tools/bin
 Save and apply changes:
 
 bash
 Copy code
-source ~/.bashrc
+
+    source ~/.bashrc
+  
 Confirm:
 
 bash
 Copy code
-echo $ANDROID_HOME
+
+    echo $ANDROID_HOME
 🧩 5. Install Android SDK Tools (via Command Line)
 If not already installed, run:
 
 bash
 Copy code
-sdkmanager --install "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+
+    sdkmanager --install "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 💡 android-34 = Android 14 (adjust to your target SDK version)
 
 🧪 6. Create a Virtual Device (Emulator)
@@ -160,12 +169,14 @@ Navigate to your project folder:
 
 bash
 Copy code
-cd ~/Pesa-Tracker
+
+    cd ~/Pesa-Tracker
 Start the Expo dev server:
 
 bash
 Copy code
-npx expo start
+
+    npx expo start
 When Metro Bundler opens:
 
 Press a → it will automatically open your emulator and run the app.
