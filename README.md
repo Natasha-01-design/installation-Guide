@@ -63,8 +63,8 @@ eas --version
 Install Java (Required by Android Studio & Gradle)
 Android Studio and Gradle require Java 17 or higher:
 
- ```bash
-sudo apt install openjdk-17-jdk -y
+     ```bash
+      sudo apt install openjdk-17-jdk -y
 
 java -version
 You should see:
